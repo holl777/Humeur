@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal d'Humeur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Journal d'Humeur</h1>
+    
+    <label>Comment s'est déroulée votre journée ?</label>
+    <textarea id="dayReview" rows="4" placeholder="Décrivez votre journée ici..."></textarea>
+    
+    <label>Votre humeur globale :</label>
+    <select id="mood">
+        <option value="heureux">😊 Heureux</option>
+        <option value="neutre">😐 Neutre</option>
+        <option value="triste">😔 Triste</option>
+        <option value="anxieux">😟 Anxieux</option>
+    </select>
+
+    <label>Qu'est-ce qui a été le plus difficile aujourd'hui ?</label>
+    <textarea id="challenges" rows="3" placeholder="Décrivez les moments difficiles de votre journée..."></textarea>
+
+    <label>Quels ont été vos meilleurs moments aujourd'hui ?</label>
+    <textarea id="highlights" rows="3" placeholder="Décrivez vos moments de joie ou de réussite..."></textarea>
+
+    <label>Y a-t-il quelque chose que vous auriez voulu faire différemment ?</label>
+    <textarea id="reflection" rows="3" placeholder="Réfléchissez à ce que vous auriez changé..."></textarea>
+
+    <button onclick="saveMoodEntry()">Enregistrer l'humeur</button>
+    <button onclick="openCalendar()">Voir le calendrier d'humeur</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
